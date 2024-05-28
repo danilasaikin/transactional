@@ -38,20 +38,12 @@ public class ApiController {
         return productRepository.save(product);
     }
 
-    @PostMapping("/orders")
-    public Order placeOrder(@RequestParam Long customerId, @RequestParam List<Long> productIds) throws Exception {
-        return orderService.placeOrder(customerId, productIds);
-    }
 
     @GetMapping("/orders/{orderId}")
     public Order getOrder(@PathVariable Long orderId) {
         return orderRepository.findById(orderId).orElseThrow(() -> new RuntimeException("Order not found"));
     }
 
-    @GetMapping("/customers/{customerId}")
-    public Customer getCustomer(@PathVariable Long customerId) {
-        return customerRepository.findById(customerId).orElseThrow(() -> new RuntimeException("Customer not found"));
-    }
 }
 
 

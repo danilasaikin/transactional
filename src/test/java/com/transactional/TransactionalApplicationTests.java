@@ -4,7 +4,6 @@ import com.transactional.entity.Customer;
 import com.transactional.entity.Order;
 import com.transactional.entity.Product;
 import com.transactional.repository.CustomerRepository;
-import com.transactional.repository.OrderRepository;
 import com.transactional.repository.ProductRepository;
 import com.transactional.service.OrderService;
 import org.junit.jupiter.api.Test;
